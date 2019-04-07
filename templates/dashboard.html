@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block name_title %}Início{% endblock %}
+{% load static %}
+{% block link_css %}<link type="text/css" rel="stylesheet" href="{% static 'css/dashboard.css' %}">{% endblock %}
+
+{% block content %}
+
+{% include "nav.html" %}
+
+<div class="container">
+    <div class="row">
+        <div class="col m4 s12"> 
+
+            <div class="card-panel grey z-depth-4">
+                <span class="white-text"><i class="material-icons" style="font-size:70px">face</i>
+                <span style="font-size:16px">Pagamentos D: {{numeroPagamentosD}}</span> 
+            </div>
+
+        </div>
+
+        <div class="col m4 s12"> 
+
+            <div class="card-panel grey z-depth-4">
+                <span class="white-text"><i class="material-icons" style="font-size:70px">face</i>
+                <span style="font-size:16px">Pacientes: {{numeroPacientes}}</span> 
+            </div>
+        
+        </div>
+        
+        <div class="col m4 s12"> 
+
+            <div class="card-panel grey z-depth-4">
+                <span class="white-text"><i class="material-icons" style="font-size:70px">face</i>
+                <span style="font-size:16px">Pagamentos T: {{numeroPagamentosT}}</span> 
+            </div>
+        
+        </div>
+        
+    </div>
+
+        <div class="row">
+
+            <div class="col m2 s6 center"> 
+
+                <a href="{% url 'criarPaciente' %}">
+                    <div class="card-panel light-blue lighten-3 center">
+                            <p class="white-text"><i class="material-icons" style="font-size:40px">account_circle</i></p>
+                            <p style="font-size:12px" class="white-text">Criar paciente</p>    
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="col m2 s6 center"> 
+
+                <a href="{% url 'buscarPaciente' %}">
+                    <div class="card-panel light-blue lighten-3 center">
+                            <p class="white-text"><i class="material-icons" style="font-size:40px">assignment_ind</i></p>
+                            <p style="font-size:12px" class="white-text">Buscar Paciente</p>    
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="col m2 s6 center"> 
+
+                <a href="{% url 'criarPagamento' %}">
+                    <div class="card-panel light-blue lighten-3 center">
+                            <p class="white-text"><i class="material-icons" style="font-size:40px">credit_card</i></p>
+                            <p style="font-size:12px" class="white-text">Adicionar pagamento</p>    
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="col m2 s6 center"> 
+
+                <a href="{% url 'buscarPagamento' %}">
+                    <div class="card-panel light-blue lighten-3 center">
+                            <p class="white-text"><i class="material-icons" style="font-size:40px">assignment_returned</i></p>
+                            <p style="font-size:12px" class="white-text">Buscar Pagamento</p>    
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
