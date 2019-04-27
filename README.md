@@ -1,4 +1,4 @@
-# Paymment medical system
+# Payment medical system
 
 Hi, my name is Daniel :wave: and I developed this open-source payment system that create multiples datasheet, to person and historic payment
 
